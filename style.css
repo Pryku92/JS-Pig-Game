@@ -45,6 +45,13 @@ body {
     padding: 100px;
 }
 
+.player-0-panel {
+    padding-left: 25px;
+}
+.player-1-panel {
+    padding-right: 25px;
+}
+
 
 
 /**********************************************
@@ -57,7 +64,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 100;
-    margin-top: 20px;
+    margin-top: 70px;
     margin-bottom: 10px;
     position: relative;
 }
@@ -67,7 +74,7 @@ body {
     font-size: 80px;
     font-weight: 100;
     color: #EB4D4D;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
 }
 
 .active { background-color: #f7f7f7; }
@@ -78,9 +85,9 @@ body {
     font-size: 47px;
     position: absolute;
     color: #EB4D4D;
-    top: -7px;
-    right: 10px;
-    
+    top: -50px;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .player-current-box {
@@ -137,19 +144,68 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
+.new-control {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-.dice {
+.new-winning, .new-label {
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: block;
+}
+
+.new-label {
+    margin-top: 20px;
+}
+
+.new-winning {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: 1px solid #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-new {
+    position: static;
+    display: block;
+    transform: translateX(0);
+}
+
+.btn-rules {
+    top: 10px;
+    left: 10px;
+    transform: translateX(0);
+    width: auto;
+}
+
+.btn-roll { top: 460px;}
+.btn-hold { top: 515px;}
+
+.dice-box {
     position: absolute;
     left: 50%;
-    top: 178px;
     transform: translateX(-50%);
-    height: 100px;
-    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
-    display: none;
+    top: 165px;
 }
+
+.dice1, .dice2 {
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.3);
+    display: block;
+    height: 90px;
+    margin: 30px 70px;
+}
+
+.dice1 {margin-left: 0;}
+.dice2 {margin-right: 0;}
+
+
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
