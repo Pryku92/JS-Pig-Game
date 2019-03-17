@@ -161,6 +161,7 @@ i {
 
 .new-label {
     margin-top: 20px;
+    text-align: center;
 }
 
 .new-winning {
@@ -170,6 +171,17 @@ i {
     border: 1px solid #555;
     text-align: center;
     margin-top: 10px;
+}
+
+/* REMOVE SPINNERS FROM NUMBER INPUT */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }
 
 .btn-new {
@@ -183,6 +195,7 @@ i {
     left: 10px;
     transform: translateX(0);
     width: auto;
+    display: none;
 }
 
 .btn-roll { top: 460px;}

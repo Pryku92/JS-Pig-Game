@@ -32,9 +32,9 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         dice2 = Math.floor(Math.random() * 6) + 1;
         bothDices = dice1 + dice2;
         //update UI
-        DOMdiceBox.style.opacity = 1;
         DOMdice1.src = 'dice-' + dice1 + '.png';
         DOMdice2.src = 'dice-' + dice2 + '.png';
+        DOMdiceBox.style.opacity = 1;
         //if both dices are higher than 1 check against previousRoll, else next player
         if (dice1 !== 1 && dice2 !== 1) {
             //if one of the dices is 6 compare with previousRoll
